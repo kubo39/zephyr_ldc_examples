@@ -1,0 +1,7 @@
+name "gettimeofday"
+authors "Hiroki Noda"
+license "BSL-1.0"
+targetType "staticLibrary"
+targetPath "lib"
+targetName "gettimeofday_d"
+dflags "--betterC" "--float-abi=soft" "--relocation-model=static" "--preview=dip1000" platform="ldc"
