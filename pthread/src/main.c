@@ -3,8 +3,7 @@
 #define STACKSIZE 2048
 
 int stacksize = STACKSIZE;
-K_THREAD_STACK_DEFINE(stack_0, STACKSIZE);
-void* stack = stack_0;
+K_THREAD_STACK_DEFINE(stack, STACKSIZE);
 
 extern int d_main();
 
