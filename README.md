@@ -11,7 +11,7 @@ For Qemu on Zephyr, read https://docs.zephyrproject.org/latest/develop/beyond-GS
 
 ## How to build
 
-### Example: Hello world userspace
+### Example: pthread
 
 ```console
 $ cd $ZEPHYR_BASE
