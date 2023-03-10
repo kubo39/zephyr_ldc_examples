@@ -76,9 +76,6 @@ extern (C)
     pragma(printf)
     int printf(scope const char* fmt, ...);
     void perror(const scope char*);
-
-    // assert.c
-    noreturn __assert_func(scope const char* file, int line, scope const char* func, scope const char* failedexpr);
 }
 
 extern(C) void* user_function(void*)
