@@ -1,0 +1,7 @@
+name "arrayboundscheck"
+authors "Hiroki Noda"
+license "BSL-1.0"
+targetType "staticLibrary"
+targetPath "lib"
+targetName "arrayboundscheck"
+dflags "--betterC" "--float-abi=soft" "--relocation-model=static" "--preview=dip1000" platform="ldc"
