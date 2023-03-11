@@ -57,6 +57,7 @@ extern (C)
         pthread_attr_t* attr,
         const(sched_param)* schedparam
     );
+    int pthread_attr_destroy(pthread_attr_t* attr);
     int pthread_join(
         pthread_t thread,
         void** status
@@ -125,6 +126,12 @@ extern (C) int d_main()
     if (pthread_create(&thread, &attr, &user_function, null))
     {
         perror("Error creating thread");
+        return 1;
+    }
+
+    if (pthread_attr_destroy(&attr))
+    {
+        perror("Error destroying thread attributes");
         return 1;
     }
 
