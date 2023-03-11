@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/runtime
+runtime.so
+runtime.dylib
+runtime.dll
+runtime.a
+runtime.lib
+runtime-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst

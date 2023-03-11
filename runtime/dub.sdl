@@ -1,0 +1,5 @@
+name "zephyrcore"
+description "Low level library for Zephyr."
+authors "Hiroki Noda"
+copyright "Copyright © 2023, Hiroki Noda"
+license "BSL-1.0"

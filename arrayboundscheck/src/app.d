@@ -1,20 +1,15 @@
 import ldc.attributes : cold;
 
+import zephyr.core.stdc.stdio;
+
 @nogc:
 nothrow:
-
-// newlib
-extern (C)
-{
-    pragma(printf)
-    int printf(scope const char* fmt, ...);
-
-    noreturn __assert_func(scope const char* file, int line, scope const char* func, scope const char* failedexpr);
-}
 
 version(D_NoBoundsChecks) {}
 else
 {
+    import zephyr.core.stdc.assert_ : __assert_func;
+
     // Wrapping newlib's __assert_func.
     //
     // LDC: https://github.com/ldc-developers/ldc/blob/9976807e0e1acf24edfb4ba35d28c19a3f0227f2/gen/runtime.cpp#L367
