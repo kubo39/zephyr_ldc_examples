@@ -1,49 +1,11 @@
+import zephyr.core.stdc.stdio;
+import zephyr.core.sys.posix.time;
+import zephyr.core.sys.posix.sys.time;
+import zephyr.core.sys.posix.sys.types;
+import zephyr.core.sys.posix.unistd;
+
 @nogc:
 nothrow:
-
-// newlib
-extern (C)
-{
-    // stdio.h
-    pragma(printf)
-    int printf(scope const char* fmt, ...);
-
-    // errno.h
-    ref int __errno();
-    alias errno = __errno;
-
-    // sys/time.h
-    struct timeval
-    {
-        time_t tv_sec;
-        suseconds_t tv_usec;
-    }
-    int gettimeofday(timeval*, void*);
-
-    // sys/types.h
-    alias time_t = long;
-    alias suseconds_t = long;
-
-    // time.h
-    struct tm
-    {
-        int tm_sec;
-        int tm_min;
-        int tm_hour;
-        int tm_mday;
-        int tm_mon;
-        int tm_year;
-        int tm_wday;
-        int tm_yday;
-        int tm_isdst;
-    }
-    char* asctime(const scope tm*);
-    tm* localtime_r(const scope time_t*, tm*);
-    time_t time(time_t*);
-
-    // unistd.h
-    uint sleep(uint);
-}
 
 extern (C) int d_main()
  {
