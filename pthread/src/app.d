@@ -1,13 +1,13 @@
 import zephyr.core.stdc.stdio;
+import zephyr.core.stdc.stdlib;
+import zephyr.core.stdc.string;
 import zephyr.core.sys.posix.pthread;
 import zephyr.core.sys.posix.sched;
 
 @nogc:
 nothrow:
 
-// pre-allocated thread stack.
-extern (C) extern  __gshared int stacksize;
-extern (C) extern __gshared void** stack;
+enum STACKSIZE = 2048;
 
 extern(C) void* user_function(void*)
 {
@@ -27,7 +27,14 @@ extern (C) int d_main()
         return 1;
     }
 
-    if (pthread_attr_setstack(&attr, &stack, stacksize))
+    void* stack = malloc(STACKSIZE);
+    if (stack is null)
+    {
+        perror("Error allocating thread stack");
+        return 1;
+    }
+    memset(stack, 0x0, STACKSIZE);
+    if (pthread_attr_setstack(&attr, &stack, STACKSIZE))
     {
         perror("Error initializing thread stack");
         return 1;
