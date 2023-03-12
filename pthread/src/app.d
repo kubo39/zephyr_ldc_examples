@@ -77,6 +77,7 @@ extern (C) int d_main()
         perror("Unable to join thread");
         return 1;
     }
+    free(stack);
 
     return 0;
 }
