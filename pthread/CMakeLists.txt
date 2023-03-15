@@ -7,10 +7,10 @@ project(ldc_pthread_hello)
 target_sources(app PRIVATE src/main.c)
 
 if(${ARCH} STREQUAL "posix" OR ${ARCH} STREQUAL "x86")
-    set(ldc_target i686-unknown-linux-musl)
+    set(ldc_target i686-unknown-none-newlibeabi)
 elseif(${ARCH} STREQUAL "arm")
     if(CONFIG_CPU_CORTEX_M3)
-        set(ldc_target thumbv7em-none-linux-musleabi)
+        set(ldc_target thumbv7em-unknown-none-newlibeabi)
     else()
         message(FATAL_ERROR "ARCH ${ARCH} not supported")
     endif()
@@ -32,6 +32,7 @@ ExternalProject_Add(
         build
         -f
         -b debug
+        --compiler=$ENV{HOME}/dev/install-ldc/bin/ldc2
         --arch=${ldc_target}
     INSTALL_COMMAND ""
     BUILD_BYPRODUCTS    ${ldc_src_dir}/lib/libpthread_hello.a
