@@ -11,7 +11,7 @@ For Qemu on Zephyr, read https://docs.zephyrproject.org/latest/develop/beyond-GS
 
 ## How to build
 
-Currently requires patched ldc compiler: https://github.com/kubo39/ldc/tree/newlib-assert
+Currently requires upstream ldc compiler: https://github.com/ldc-developers/ldc
 
 ### Example: pthread
 
