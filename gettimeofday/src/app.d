@@ -1,4 +1,5 @@
 import zephyr.core.stdc.stdio;
+import zephyr.core.stdc.errno;
 import zephyr.core.sys.posix.time;
 import zephyr.core.sys.posix.sys.time;
 import zephyr.core.sys.posix.sys.types;
