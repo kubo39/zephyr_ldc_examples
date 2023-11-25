@@ -16,7 +16,7 @@ extern (C) int d_main()
     {
         int res = gettimeofday(&tv, null);
         time_t now = time(null);
-        tm tm;
+        tm tm = void;
         localtime_r(&now, &tm);
 
         if (res < 0)
