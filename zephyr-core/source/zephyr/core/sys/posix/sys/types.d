@@ -1,4 +1,4 @@
-module core.sys.posix.sys.types;
+module zephyr.core.sys.posix.sys.types;
 
 extern (C):
 nothrow:

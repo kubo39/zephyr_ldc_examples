@@ -1,6 +1,6 @@
-import core.sys.posix.sys.time;
+module zephyr.core.sys.posix.sys.time;
 
-import core.sys.posix.sys.types;
+import zephyr.core.sys.posix.sys.types;
 
 extern (C):
 nothrow:

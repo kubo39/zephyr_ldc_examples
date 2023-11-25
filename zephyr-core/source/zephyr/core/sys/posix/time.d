@@ -1,5 +1,7 @@
 module zephyr.core.sys.posix.time;
 
+import zephyr.core.sys.posix.sys.types;
+
 extern (C):
 nothrow:
 @nogc:
