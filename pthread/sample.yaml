@@ -1,0 +1,9 @@
+sample:
+  description: pthread example
+  name: pthread
+common:
+  build_only: true
+  platform_allow:
+    - qemu_cortex_m3
+tests:
+  app.default: {}
