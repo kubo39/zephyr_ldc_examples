@@ -17,12 +17,11 @@ For Qemu on Zephyr, read [Run the Application in QEMU](https://docs.zephyrprojec
 
 ```console
 $ source ~/zephyrproject/.venv/bin/activate
-$ cd $ZEPHYR_BASE
-$ west build -b qemu_cortex_m3 samples/ldc_examples/pthread
+$ west build -b qemu_cortex_m3 pthread
 $ west build -t run
 (...)
-*** Booting Zephyr OS build zephyr-v3.3.0-592-gcaa88b2cfdf2 ***
-thread stack: 0x20000698
+*** Booting Zephyr OS build v4.0.0-4204-gcef0c1af0d8f ***
+thread stack: 0x200026e4
 Hello World!
 QEMU: Terminated
 ```
@@ -32,7 +31,7 @@ QEMU: Terminated
 ```console
 $ source ~/zephyrproject/.venv/bin/activate
 $ cd $ZEPHYR_BASE
-$ west build -b native_sim samples/ldc_examples/pthread
+$ west build -b native_sim pthread
 $ west build -t run
 (...)
 *** Booting Zephyr OS build v4.0.0-4204-gcef0c1af0d8f ***
