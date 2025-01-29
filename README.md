@@ -30,7 +30,6 @@ QEMU: Terminated
 
 ```console
 $ source ~/zephyrproject/.venv/bin/activate
-$ cd $ZEPHYR_BASE
 $ west build -b native_sim pthread
 $ west build -t run
 (...)
