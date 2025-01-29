@@ -30,7 +30,7 @@ jobs:
           compiler: ldc
 
       - name: Build firmware
-        working-directory: ldc_hello
+        working-directory: zephyr_ldc_examples
         shell: bash
         run: |
           west build -b qemu_cortex_m3 pthread
