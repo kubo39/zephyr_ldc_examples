@@ -2,8 +2,8 @@
 
 ## Prerequiresites
 
-- LDC
-- Dub
+- LDC (>=1.32.1)
+- DUB
 
 For Zephyr, read https://docs.zephyrproject.org/latest/develop/getting_started/index.html
 
@@ -11,11 +11,10 @@ For Qemu on Zephyr, read https://docs.zephyrproject.org/latest/develop/beyond-GS
 
 ## How to build
 
-Currently requires upstream ldc compiler: https://github.com/ldc-developers/ldc
-
 ### Example: pthread
 
 ```console
+$ source ~/zephyrproject/.venv/bin/activate
 $ cd $ZEPHYR_BASE
 $ west build -b qemu_cortex_m3 samples/ldc_examples/pthread
 $ west build -t run

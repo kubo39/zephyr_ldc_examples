@@ -32,7 +32,7 @@ ExternalProject_Add(
         build
         -f
         -b debug
-        --compiler=$ENV{HOME}/dev/install-ldc/bin/ldc2
+        --compiler=ldc2
         --arch=${ldc_target}
     INSTALL_COMMAND ""
     BUILD_BYPRODUCTS    ${ldc_src_dir}/lib/libpthread_hello.a
