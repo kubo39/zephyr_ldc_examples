@@ -31,7 +31,7 @@ ExternalProject_Add(
         dub
         build
         -f
-        -b debug
+        -b release
         --compiler=ldc2
         --arch=${ldc_target}
     INSTALL_COMMAND ""
