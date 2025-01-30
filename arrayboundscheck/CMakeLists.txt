@@ -31,7 +31,7 @@ ExternalProject_Add(
         dub
         build
         -f
-        -b debug
+        --compiler=ldc2
         --arch=${ldc_target}
     INSTALL_COMMAND ""
     BUILD_BYPRODUCTS    ${ldc_src_dir}/lib/libarrayboundscheck.a
