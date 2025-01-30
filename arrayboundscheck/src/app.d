@@ -1,7 +1,3 @@
-import ldc.attributes : cold;
-
-import zephyr.core.stdc.stdio;
-
 @nogc:
 nothrow:
 
