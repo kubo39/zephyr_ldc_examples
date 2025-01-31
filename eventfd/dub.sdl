@@ -1,0 +1,7 @@
+name "eventfd_example"
+authors "Hiroki Noda"
+license "BSL-1.0"
+targetType "staticLibrary"
+targetPath "lib"
+targetName "eventfd_example"
+dependency "zephyr-core" path="../zephyr-core"

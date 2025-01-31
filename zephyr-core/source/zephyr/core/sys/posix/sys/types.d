@@ -6,3 +6,4 @@ nothrow:
 
 alias time_t = long;
 alias suseconds_t = long;
+alias ssize_t = long;

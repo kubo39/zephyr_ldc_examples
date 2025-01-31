@@ -1,0 +1,9 @@
+sample:
+  description: eventfd example
+  name: eventfd
+common:
+  build_only: true
+  platform_allow:
+    - qemu_cortex_m3
+tests:
+  app.default: {}
