@@ -34,4 +34,4 @@ jobs:
         shell: bash
         run: |
           west build -b qemu_cortex_m3 pthread
-          west twister -T pthread -W -j 1 -v
+          west twister -T pthread -j 1 -v
