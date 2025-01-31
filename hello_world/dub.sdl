@@ -1,0 +1,7 @@
+name "hello_world"
+authors "Hiroki Noda"
+license "BSL-1.0"
+targetType "staticLibrary"
+targetPath "lib"
+targetName "helloworld"
+dependency "zephyr-core" path="../zephyr-core"
