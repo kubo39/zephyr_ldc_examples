@@ -8,11 +8,11 @@ target_sources(app PRIVATE src/main.c)
 
 if(${ARCH} STREQUAL "posix" OR ${ARCH} STREQUAL "x86")
     set(ldc_target i686-unknown-none-newlibeabi)
-elseif(${ARCH} STREQUAL "arm")
+elseif(CONFIG_CPU_CORTEX_M)
     if(CONFIG_CPU_CORTEX_M3)
         set(ldc_target thumbv7em-unknown-none-newlibeabi)
     else()
-        message(FATAL_ERROR "ARCH ${ARCH} not supported")
+        message(FATAL_ERROR "Unknown Cortex-M target")
     endif()
 else()
     message(FATAL_ERROR "ARCH ${ARCH} not supported")
@@ -32,7 +32,7 @@ ExternalProject_Add(
         build
         -f
         -b debug
-        --compiler=$ENV{HOME}/dev/install-ldc/bin/ldc2
+        --compiler=ldc2
         --arch=${ldc_target}
     INSTALL_COMMAND ""
     BUILD_BYPRODUCTS    ${ldc_src_dir}/lib/libgettimeofday_d.a

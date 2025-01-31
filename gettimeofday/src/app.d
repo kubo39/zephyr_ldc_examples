@@ -5,10 +5,11 @@ import zephyr.core.sys.posix.sys.time;
 import zephyr.core.sys.posix.sys.types;
 import zephyr.core.sys.posix.unistd;
 
+extern(C):
 @nogc:
 nothrow:
 
-extern (C) int d_main()
+int d_main()
  {
     timeval tv = void;
 
